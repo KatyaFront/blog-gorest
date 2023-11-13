@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Post</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script defer src="main.js"></script>
     <!-- этот скрипт будет инициализировать загрузку данных о статьях и страницах, полученных с сервера-->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Получение значения параметра page из URL
+            // Получение значения параметра id из URL
             const urlParams = new URLSearchParams(window.location.search);
-            const page = parseInt(urlParams.get('page')) || 1;
+            const postID = parseInt(urlParams.get('id'));
 
             // Загрузка данных для указанной страницы    
-            loadData(page); 
+            loadDataPost(postID); 
         });   
     </script>
 </head>
